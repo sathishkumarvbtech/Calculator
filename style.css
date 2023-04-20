@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,*,::after,::before{
+  padding: 0;
+  margin: 0;
+}
+
+.button-style {
+  @apply bg-gray-600 rounded-lg py-3 text-xl hover:bg-gray-500;
+}
+
+.btnOperreation{
+  @apply bg-yellow-600 rounded-lg py-3 text-xl hover:bg-yellow-500;
+}
