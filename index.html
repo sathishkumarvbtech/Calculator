@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Calculator</title>
+  <title>Calculator Web App</title>
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -15,37 +17,41 @@
         <h1 class="tracking-wider">Calculator</h1>
       </div>
       <div class="calculator__body">
-        <div class="calculator__values my-10 pr-8 rounded text-3xl uppercase text-right">
-         5+2
+        <div class="my-5">
+          <div class="text-sm mb-2 tracking-widest text-right pr-8 text-gray-500" id="operands"></div>
+          <div class="calculator__values pr-8 rounded text-3xl uppercase text-right" id="result">
+            0
+          </div>
         </div>
-      <div class="flex">
-        <div class="calculator__buttons grid grid-cols-3 gap-4 w-9/12 pr-4">
-          <button class="rounded-lg py-3 bg-red-900 !bg-opacity-25 text-red-800 font-semibold hover:bg-red-600">C</button>
-          <button class="button-style">%</button>
-          <button class="button-style">X</button>
-          <button class="button-style">7</button>
-          <button class="button-style">8</button>
-          <button class="button-style">9</button>
-          <button class="button-style">4</button>
-          <button class="button-style">5</button>
-          <button class="button-style">6</button>
-          <button class="button-style">1</button>
-          <button class="button-style">2</button>
-          <button class="button-style">3</button>
-          <button class="button-style col-span-2">0</button>
-          <button class="button-style">.</button>
+        <div class="flex">
+          <div class="calculator__buttons grid grid-cols-3 gap-4 w-9/12 pr-4">
+            <button class="rounded-lg py-3 bg-red-900 !bg-opacity-25 text-red-800 font-semibold hover:bg-red-600"
+              id="clearValues">C</button>
+            <button class="button-style" data-number>(</button>
+            <button class="button-style" data-number>)</button>
+            <button class="button-style" data-number>7</button>
+            <button class="button-style" data-number>8</button>
+            <button class="button-style" data-number>9</button>
+            <button class="button-style" data-number>4</button>
+            <button class="button-style" data-number>5</button>
+            <button class="button-style" data-number>6</button>
+            <button class="button-style" data-number>1</button>
+            <button class="button-style" data-number>2</button>
+            <button class="button-style" data-number>3</button>
+            <button class="button-style col-span-2" data-number>0</button>
+            <button class="button-style" data-number>.</button>
+          </div>
+          <div class="w-2/12 flex flex-col gap-4">
+            <button class="btnOperreation" data-operator>/</button>
+            <button class="btnOperreation" data-operator>*</button>
+            <button class="btnOperreation" data-operator>-</button>
+            <button class="btnOperreation" data-operator>+</button>
+            <button class="bg-green-600 rounded-lg py-3 text-xl hover:bg-green-500" id="equalOperends">=</button>
+          </div>
         </div>
-        <div class="w-2/12 flex flex-col gap-4">
-          <button class="btnOperreation">/</button>
-          <button class="btnOperreation">*</button>
-          <button class="btnOperreation">-</button>
-          <button class="btnOperreation">+</button>
-          <button class="bg-green-600 rounded-lg py-3 text-xl hover:bg-green-500">=</button>
-      </div>
       </div>
     </div>
-  </div>
-  <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js"></script>
 </body>
 
 </html>
