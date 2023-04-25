@@ -70,10 +70,16 @@ document.body.addEventListener('keydown', (event) => {
 });
 
 document.body.addEventListener('keydown', (event) => {
-    if (event.key === 'Backspace') {
-      const sliced = calcValues.innerText.slice(0, -1);
-      calcValues.innerText = sliced;
+    if (event.key === 'Enter') {
+        evaluate()
     }
-  });
+})
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'Backspace') {
+        const sliced = calcValues.innerText.slice(0, -1);
+        calcValues.innerText = sliced;
+    }
+});
 
 
